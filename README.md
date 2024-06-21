@@ -13,10 +13,11 @@ Python Materials Classification by Conductivity (pymatcc) is a classification fr
 ## Contributors
 
 ## Citation
-	If you use `pymatgen` in your research, please consider citing the following work:
+If you use `pymatgen` in your research, please consider citing the following work:
 	
-	> Damdae Park, Wonsuk Chung, Byoung Koun Min, Ung Lee, Seungho Yu and Kyeongsu Kim. Computational screening of sodium solid electrolytes
-through unsupervised learning. npj Computational Materials, 2024, [TBD]
+> Damdae Park, Wonsuk Chung, Byoung Koun Min, Ung Lee, Seungho Yu and Kyeongsu Kim.
+> Computational screening of sodium solid electrolytes through unsupervised learning.
+> npj Computational Materials, 2024, [TBD]
 
 
 ## License
