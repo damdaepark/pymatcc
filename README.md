@@ -1,5 +1,5 @@
 # pymatcc
-Python Materials Classification by Conductivity (pymatcc) is a classification framework that can rapidly assess the conductivity of crystals based on their structures given in .cif files. The software currently supports the assessment of materials containing Na (sodium).
+Python Materials Classification by Conductivity (pymatcc) is a classification framework designed to rapidly assess the conductivity of crystals based on their structures. The software currently supports the assessment of materials containing Na (sodium) given in .cif files.
 
 
 ## Requirements
