@@ -13,7 +13,7 @@ Python Materials Classification by Conductivity (pymatcc) is a classification fr
 The prediction model was trained based on the Materials Project dataset (ver. 2022.10.28).
 
 ## Contributors
-This software was primarily written by Damdae Park and was advised by Dr. Kyeongsu Kim.
+This software was primarily written by Dr. Damdae Park and was advised by Dr. Kyeongsu Kim.
 
 ## Citation
 If you use `pymatgen` in your research, please consider citing the following work:
