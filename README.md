@@ -14,7 +14,7 @@ The classifier was trained by unsupervised clustering of compounds from database
 
 
 ## Data
-Materials Project dataset (ver. 2022.10.28) was used for training the prediction model.
+Materials Project dataset (ver. 2022.10.28) was used for training the classifier.
 
 ## Contributors
 This software was primarily written by Dr. Damdae Park and was advised by Dr. Kyeongsu Kim.
