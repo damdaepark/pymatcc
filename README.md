@@ -2,7 +2,7 @@
 Python Materials Conductivity Classifier (Pymatcc) is an open-source Python library engineered to rapidly assess the ionic conductivity potential of crystalline compounds based on their lattice structure.
 
 ## How it works
-For a queried candidate compound, Pymatcc first evaluates its structural descriptors (e.g., orbital field matrix, valence orbital, ...) and encodes them into a feature vector. Based on the feature vector representation, the candidate is classified into a material group of structurally similar compounds. After classification, Pymatcc investigates available ionic conductivity records of the compounds within the material group and thereby the potential of the candidate is examined. Note that the classifier is *a priori* trained during the unsupervised clustering of compounds from a database, from which the material groups are also identified. The library currently supports the materials containing Na (sodium) and requires .cif files for input.
+For a queried candidate compound, Pymatcc first evaluates its structural descriptors (e.g., orbital field matrix, valence orbital, ...) and encodes them into a feature vector. Based on this feature vector representation, the candidate is classified into a material group of structurally similar compounds. After classification, Pymatcc investigates available ionic conductivity records of the compounds within the material group and thereby the potential of the candidate is examined. Note that the classifier is *a priori* trained during the unsupervised clustering of compounds from a database, from which the material groups are also identified. The library currently supports the materials containing Na (sodium) and requires .cif files for input.
 
 ## Requirements
 
