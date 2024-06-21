@@ -8,16 +8,19 @@ Python Materials Classification by Conductivity (pymatcc) is a classification fr
 
 ## Usage
 
+
 ## Data
+To train the model we have used the dataset from the Materials Project (v.2022.10.28) using Pymatgen (2023.5.10).
 
 ## Contributors
+This software was primarily written by Damdae Park and was advised by Dr. Kyeongsu Kim and Dr. Ung Lee.
 
 ## Citation
 If you use `pymatgen` in your research, please consider citing the following work:
 	
 > Damdae Park, Wonsuk Chung, Byoung Koun Min, Ung Lee, Seungho Yu and Kyeongsu Kim.
 > Computational screening of sodium solid electrolytes through unsupervised learning.
-> npj Computational Materials, 2024, [TBD]
+> npj Computational Materials. 2024. [TBD]
 
 
 ## License
@@ -25,8 +28,16 @@ pymatcc is released under the MIT license. The terms of the licenses are as foll
 
 > The MIT License (MIT) Copyright (c) 2011-2012 MIT & LBNL
 >
-> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+> Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+> and associated documentation files (the "Software"), to deal in the Software without restriction,
+> including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+> and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+> subject to the following conditions:
 >
 > The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 >
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+> NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+> IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+> WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
+> THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
