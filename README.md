@@ -1,5 +1,5 @@
 # pymatcc
-Python Materials Classification by Conductivity (pymatcc) is a classification framework that can rapidly assess the conductivity of crystals based on their structures given in .cif files.
+Python Materials Classification by Conductivity (pymatcc) is a classification framework that can rapidly assess the conductivity of crystals based on their structures given in .cif files. The software currently supports the assessment of materials containing Na (sodium).
 
 
 ## Requirements
@@ -10,7 +10,7 @@ Python Materials Classification by Conductivity (pymatcc) is a classification fr
 
 
 ## Data
-To train the model we have used the dataset from the Materials Project (v.2022.10.28) using Pymatgen (2023.5.10).
+The prediction model was trained based on the Materials Project dataset (ver. 2022.10.28).
 
 ## Contributors
 This software was primarily written by Damdae Park and was advised by Dr. Kyeongsu Kim and Dr. Ung Lee.
@@ -20,8 +20,7 @@ If you use `pymatgen` in your research, please consider citing the following wor
 	
 > Damdae Park, Wonsuk Chung, Byoung Koun Min, Ung Lee, Seungho Yu and Kyeongsu Kim.
 > Computational screening of sodium solid electrolytes through unsupervised learning.
-> npj Computational Materials. 2024. [TBD]
-
+> npj Computational Materials. 2024. [URL link TBD]
 
 ## License
 pymatcc is released under the MIT license. The terms of the licenses are as follows:
