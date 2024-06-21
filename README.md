@@ -1,6 +1,8 @@
 # pymatcc
-Python Materials Classification by Conductivity (pymatcc) is a classification framework designed to rapidly assess the conductivity of crystals based on their structures. The software currently supports the assessment of materials containing Na (sodium) given in .cif files.
+Python Materials Conductivity Classifier (Pymatcc) is an open-source Python library engineered to rapidly assess the ionic conductivity potential of crystalline compounds based on their lattice structure.
 
+## How it works
+For a queried candidate compound, Pymatcc first evaluates its structural descriptors (e.g., orbital field matrix, valence orbital, ...) and encodes them into a feature vector. Based on the feature vector representation, the candidate is classified into a group of structurally similar materials. Here the classifier is a priori trained during the unsupervised clustering of the compounds from the  Materials Project Dataset, from which such a group is also identified. Pymatcc investigates the available ionic conductivity records of the materials within the group and thereby the potential of the candidate is examined. The library currently supports the materials containing Na (sodium) and requires .cif files for input.
 
 ## Requirements
 
@@ -10,20 +12,20 @@ Python Materials Classification by Conductivity (pymatcc) is a classification fr
 
 
 ## Data
-The prediction model was trained based on the Materials Project dataset (ver. 2022.10.28).
+Materials Project dataset (ver. 2022.10.28) was used for training the prediction model.
 
 ## Contributors
 This software was primarily written by Dr. Damdae Park and was advised by Dr. Kyeongsu Kim.
 
 ## Citation
-If you use `pymatgen` in your research, please consider citing the following work:
+If you use `pymatcc` in your research, please consider citing the following work:
 	
 > Damdae Park, Wonsuk Chung, Byoung Koun Min, Ung Lee, Seungho Yu and Kyeongsu Kim.
 > Computational screening of sodium solid electrolytes through unsupervised learning.
 > npj Computational Materials. 2024. [URL link TBD]
 
 ## License
-pymatcc is released under the MIT license. The terms of the licenses are as follows:
+`pymatcc` is released under the MIT license. The terms of the licenses are as follows:
 
 > The MIT License (MIT) Copyright (c) 2011-2012 MIT & LBNL
 >
