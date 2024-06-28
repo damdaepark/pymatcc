@@ -1,1 +1,4 @@
 *.pkl filter=lfs diff=lfs merge=lfs -text
+C:/Users/User/OneDrive/Project/Modeling/SolidElectrolyte/deploy/pymatcc/dat/Na/mp_data_subdivision.pkl filter=lfs diff=lfs merge=lfs -text
+C:/Users/User/OneDrive/Project/Modeling/SolidElectrolyte/deploy/pymatcc/dat/Na/mp_data_integrated.pkl filter=lfs diff=lfs merge=lfs -text
+C:/Users/User/OneDrive/Project/Modeling/SolidElectrolyte/deploy/pymatcc/dat/Na/mp_data_clustering.pkl filter=lfs diff=lfs merge=lfs -text
