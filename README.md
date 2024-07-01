@@ -1,16 +1,32 @@
 # pymatcc
-Python Materials Conductivity Classifier (Pymatcc) is an open-source Python library engineered to rapidly assess the ionic conductivity potential of crystalline compounds based on their lattice structure. The library currently supports the materials containing Na (sodium) and .cif input file.
+Python Materials Conductivity Classifier (Pymatcc) is a classification framework developed to evaluate the ionic conductivity potential of solid-state electrolytes based on their lattice structures. The model currently allows the materials containing Na (sodium) given in .cif format.
 
 ## How it works
-For a queried compound, Pymatcc first evaluates its structural descriptors (e.g., orbital field matrix, valence orbital, ...) and encodes them into a feature vector. Based on this feature vector representation, the compound is classified into one of the material groups consisting of structurally similar materials. Pymatcc then investigates available ionic conductivity records of the materials within the group, and the potential of the compound is assessed. It uses a classifier trained through unsupervised clustering of the compounds from available open databases (e.g., Materials Project, ICSD, etc.), during which the material groups were also identified. <br/>
-
+For a given input material, Pymatcc first evaluates its structural descriptors (e.g., orbital field matrix, valence orbital, ...) and encodes them into a feature vector. Based on this feature vector representation, the material is classified into one of the groups made up of structurally similar compounds. Pymatcc then investigates available ionic conductivity records of the compounds within the group, and the potential of input material is assessed. The classifier was trained by unsupervised clustering of Na-ion solide-state electrolytes collected from open databases (e.g., Materials Project, ICSD, etc.) <br/>
 
 ## Requirements
+Pymatcc was developed using the libraries specified below.
+hdbscan==0.8.37
+pacmap==0.7.3
+pymatgen==2023.8.10
+dscribe==2.1.1
+numpy==1.24.4
+pandas==2.0.3
+matplotlib==3.7.5
+colorcet==3.1.0
+matminer==0.9.0
+
+The package requirements are listed in requirements.txt file. Run the following command to install dependencies in your virtual environment:
+
+    $ pip install -r requirements.txt
+
 
 ## Setup
+Pymatcc currently does not support pip/conda installation.
 
 ## Usage
-
+Download the repository and run pymatcc
+python pymatcc.py -f CIF_FILE_DIRECTORY
 
 ## Data
 Materials Project dataset (ver. 2022.10.28) was used for training the classifier.
