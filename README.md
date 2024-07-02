@@ -25,7 +25,7 @@ The package requirements are listed in requirements.txt file. Run the following 
 Pymatcc currently does not support pip/conda installation.
 
 ## Usage
-Download the repository and run pymatcc by
+Download the repository and run pymatcc by:
 
     $ python pymatcc.py -f FILENAME.cif
 
