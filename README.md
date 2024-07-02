@@ -6,15 +6,15 @@ For a given input material, Pymatcc first evaluates its structural descriptors (
 
 ## Requirements
 Pymatcc was developed using the libraries specified below.
-hdbscan==0.8.37
-pacmap==0.7.3
-pymatgen==2023.8.10
-dscribe==2.1.1
-numpy==1.24.4
-pandas==2.0.3
-matplotlib==3.7.5
-colorcet==3.1.0
-matminer==0.9.0
+hdbscan==0.8.37 <br/>
+pacmap==0.7.3 <br/>
+pymatgen==2023.8.10 <br/>
+dscribe==2.1.1 <br/>
+numpy==1.24.4 <br/>
+pandas==2.0.3 <br/>
+matplotlib==3.7.5 <br/>
+colorcet==3.1.0 <br/>
+matminer==0.9.0 <br/>
 
 The package requirements are listed in requirements.txt file. Run the following command to install dependencies in your virtual environment:
 
@@ -25,8 +25,8 @@ The package requirements are listed in requirements.txt file. Run the following 
 Pymatcc currently does not support pip/conda installation.
 
 ## Usage
-Download the repository and run pymatcc
-python pymatcc.py -f CIF_FILE_DIRECTORY
+Download the repository and run pymatcc by
+    $ python pymatcc.py -f FILENAME.cif
 
 ## Data
 Materials Project dataset (ver. 2022.10.28) was used for training the classifier.
