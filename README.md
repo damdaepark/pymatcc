@@ -7,7 +7,7 @@ For a given input material, Pymatcc first evaluates its structural descriptors (
 ## Requirements
 Pymatcc was developed primarily based on the libraries below: <br/>
 - hdbscan==0.8.37 <br/>
-- pacmap==0.7.3 <br/>
+- pacmap==0.7.0 <br/>
 - pymatgen==2023.8.10 <br/>
 - dscribe==2.1.1 <br/>
 - numpy==1.24.4 <br/>

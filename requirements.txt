@@ -80,7 +80,7 @@ numpy=1.24.4=py38h1d91fd2_0
 openjpeg=2.5.2=h3d672ee_0
 openssl=3.3.1=h2466b09_1
 packaging=24.1=pyhd8ed1ab_0
-pacmap=0.7.3=pypi_0
+pacmap=0.7.0=pypi_0
 palettable=3.3.3=pypi_0
 pandas=1.5.3=pypi_0
 pillow=10.3.0=py38h8d10685_1
