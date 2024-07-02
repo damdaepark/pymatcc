@@ -42,6 +42,11 @@ If you use `pymatcc` in your research, please consider citing the following work
 > Computational screening of sodium solid electrolytes through unsupervised learning.
 > npj Computational Materials. 2024. [URL link TBD]
 
+## Acknowledgement
+The development of `pymatcc` was financially supported by the following grants from the National Research Foundation of Korea (NRF) of the Republic of Korea:
+- National Supercomputing Center with supercomputing resources including technical support (KSC-2024-CRE-0013).
+- institutional research program of Korea Institute of Science and Technology (2E32581).
+
 ## License
 `pymatcc` is released under the MIT license. The terms of the licenses are as follows:
 
