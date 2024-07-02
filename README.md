@@ -6,15 +6,15 @@ For a given input material, Pymatcc first evaluates its structural descriptors (
 
 ## Requirements
 Pymatcc was developed primarily using the libraries below: <br/>
-hdbscan==0.8.37 <br/>
-pacmap==0.7.3 <br/>
-pymatgen==2023.8.10 <br/>
-dscribe==2.1.1 <br/>
-numpy==1.24.4 <br/>
-pandas==2.0.3 <br/>
-matplotlib==3.7.5 <br/>
-colorcet==3.1.0 <br/>
-matminer==0.9.0 <br/>
+- hdbscan==0.8.37 <br/>
+- pacmap==0.7.3 <br/>
+- pymatgen==2023.8.10 <br/>
+- dscribe==2.1.1 <br/>
+- numpy==1.24.4 <br/>
+- pandas==2.0.3 <br/>
+- matplotlib==3.7.5 <br/>
+- colorcet==3.1.0 <br/>
+- matminer==0.9.0 <br/>
 
 The package requirements are listed in requirements.txt file. Run the following command to install dependencies in your virtual environment:
 
