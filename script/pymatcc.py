@@ -279,8 +279,8 @@ if __name__ == '__main__':
                         help='Folder NAME for saving output files. The results \
                             are saved in ROOT/dat/Na/results/NAME folder.')
     args = parser.parse_args()
-    filedir = args.file
-    outdir = args.out
+    filedir = args.file[0]
+    outdir = args.out[0]
         
     if not filedir:
         cprint('File directory is not specified. Terminate the evaluation process.', color='r')
