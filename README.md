@@ -7,7 +7,7 @@ For a given input material, Pymatcc first evaluates its structural descriptors (
 ## Setup
 Run the following commands to setup the environment for running `pymatcc`:
 
-    $ conda create -n [ENV_NAME] python=3.8.16
+    $ conda create -n ENV_NAME python=3.8.16
     $ pip install -r requirements.txt
 
 ## Requirements

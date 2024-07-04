@@ -38,7 +38,10 @@ for dataset, url in datasets.items():
     filedir = os.path.join(datadir, 'datasets', dataset + '.pkl')
     if not checkexists(filedir):
         cprint('Download training dataset', dataset, '...', color='c')
-        simple_cli(url=url, filename=filedir)
+        try:
+            simple_cli(url=url, filename=filedir)
+        except:
+            cprint('Cannot retrieve the dataset! Check if the connection to OneDrive is blocked.', color='r')
     else:
         cprint('Training dataset', dataset, 'has already been downloaded. Skip.', color='g')
 
