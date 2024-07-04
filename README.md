@@ -53,7 +53,7 @@ The training datasets (2.0 GB in total) will be downloaded during its first exec
 
 ## Data
 - Materials Project dataset (ver. 2022.10.28) was used for training the classifier.
-- Out-of-data sample for test was obtained from [Deng, Z. et al. Fundamental investigations on the sodium-ion transport properties of mixed polyanion solid-state battery electrolytes. Nat. Commun. 13, 4470 (2022)](https://www.nature.com/articles/s41467-022-32190-7)
+- The details of out-of-sample data used for the test run can be found in [Deng, Z. et al. Fundamental investigations on the sodium-ion transport properties of mixed polyanion solid-state battery electrolytes. Nat. Commun. 13, 4470 (2022)](https://www.nature.com/articles/s41467-022-32190-7). We used the data retrieved from [link](https://github.com/caneparesearch/NASICON_KMC_paper_data).
 
 ## Contributors
 This software was primarily written by Dr. Damdae Park and was advised by Dr. Kyeongsu Kim.
