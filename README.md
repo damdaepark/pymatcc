@@ -14,10 +14,13 @@ Then run the following commands to setup the environment for running `pymatcc`:
 
     $ cd /PATH/TO/DOWNLOAD
     $ conda create -n ENV_NAME python=3.8.16
+    $ conda activate ENV_NAME
     $ pip install -r requirements.txt
 
+Functionality has been verified on Windows (x64) and Linux (x64).
+
 ## Requirements
-Pymatcc was developed primarily based on the libraries below: <br/>
+`pymatcc` was developed primarily based on the libraries below: <br/>
 - hdbscan==0.8.37 <br/>
 - pacmap==0.7.0 <br/>
 - pymatgen==2023.8.10 <br/>
