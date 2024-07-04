@@ -29,9 +29,9 @@ Download the repository and run `pymatcc` by:
 
     $ python ./script/pymatcc.py -f "/ABSOLUTE/PATH/TO/FILENAME.cif" -o "RESULT_FOLDER_NAME"
 
-The results are saved in ./dat/results/RESULT_FOLDER_NAME
+The results will be saved in ./dat/results/RESULT_FOLDER_NAME <br/>
 
-You can test running with an out-of-sample data we provide by:
+You can try running an out-of-sample data for test:
 
     $ python ./script/test.py
 
