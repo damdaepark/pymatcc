@@ -22,8 +22,25 @@ from oxidation import apply_charge_decoration
 from simplification import structure_simplifications
 from analysis import plot_manifold, group_analysis
 
+sys.path.append(srcdir)
+from DriveDownloader.downloader import simple_cli
+
 
 datadir = os.path.join(datadir, ELEMENT)
+
+
+datasets = {}
+datasets['mp_data_clustering_test'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvusuF-0MJTnEt0aEjQ'
+datasets['mp_data_subdivision_test'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvug_LTuHocEdp-ZiCg'
+datasets['mp_data_integrated_test'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvvYIuclL75o8rafQDw'
+
+for dataset, url in datasets.items():
+    filedir = os.path.join(datadir, dataset + '.pkl')
+    if not checkexists(filedir):
+        cprint('Download training dataset', dataset, 'from OneDrive...', color='c')
+        simple_cli(url=url, filename=filedir)
+    else:
+        cprint('Training dataset', dataset, 'has already been downloaded. Skip.', color='g')
 
 
 def to_pretty_formula(composition):
@@ -95,10 +112,13 @@ def classification(X, clusterer, dim_reducer):
 
 
 def main(filedir, outdir=None):
+    # 
+    
+    # Make output directory if it is not exist
     outdir = os.path.join(datadir, 'results', outdir)
     if not checkexists(outdir, size_threshold=0):
-        os.makedirs(outdir)  # make output directory if not exist
-        
+        os.makedirs(outdir)
+    
     # Load .cif file
     cprint('Load file', filedir, '...', color='c')
     parser = CifParser(filedir)
@@ -122,28 +142,28 @@ def main(filedir, outdir=None):
     ds = evaluate_feature_vector(ds, outdir=outdir)
     
     # Load group classification model
-    modeldir = os.path.join(datadir, 'model_pacmap_pre')
+    modeldir = os.path.join(datadir, 'classifiers', 'model_pacmap_pre')
     model_pacmap_pre = load(modeldir)
-    filedir = os.path.join(datadir, 'clusterer.joblib')
+    filedir = os.path.join(datadir, 'classifiers', 'clusterer.joblib')
     clusterer_global = joblib.load(filedir)
     
     # Load subgroup classification model
-    modeldir = os.path.join(datadir, 'model_pacmap_pre_G5')
+    modeldir = os.path.join(datadir, 'classifiers', 'model_pacmap_pre_G5')
     model_pacmap_pre_G5 = load(modeldir)
-    modeldir = os.path.join(datadir, 'clusterer_G5.joblib')
+    modeldir = os.path.join(datadir, 'classifiers', 'clusterer_G5.joblib')
     clusterer_G5 = joblib.load(modeldir)
     
-    modeldir = os.path.join(datadir, 'model_pacmap_pre_G7')
+    modeldir = os.path.join(datadir, 'classifiers', 'model_pacmap_pre_G7')
     model_pacmap_pre_G7 = load(modeldir)
-    modeldir = os.path.join(datadir, 'clusterer_G7.joblib')
+    modeldir = os.path.join(datadir, 'classifiers', 'clusterer_G7.joblib')
     clusterer_G7 = joblib.load(modeldir)
     
     # Load global mapping model
-    modeldir = os.path.join(datadir, 'model_pacmap_initial')
+    modeldir = os.path.join(datadir, 'mapper', 'model_pacmap_initial')
     map_global = load(modeldir)
     
     # Load local mapping model
-    modeldir = os.path.join(datadir, 'model_pacmap_subdivision')
+    modeldir = os.path.join(datadir, 'mapper', 'model_pacmap_subdivision')
     map_local = load(modeldir)
     
     # Extract data part
@@ -179,7 +199,7 @@ def main(filedir, outdir=None):
     specialc = '0.6'
     specialc_loc = 'first'
     
-    filedir = os.path.join(datadir, 'mp_data_clustering.pkl')
+    filedir = os.path.join(datadir, 'datasets', 'mp_data_clustering.pkl')
     dd = pd.read_pickle(filedir)
     arrow_locs = {y: False for y in dd['Y'].unique()}
     arrow_locs['Noise'] = None
@@ -204,7 +224,7 @@ def main(filedir, outdir=None):
     
     if Y in [5, 7]:
         cprint('Overlay resulting coordinates in local (subgroup) map...', color='c')
-        filedir = os.path.join(datadir, 'mp_data_subdivision.pkl')
+        filedir = os.path.join(datadir, 'datasets', 'mp_data_subdivision.pkl')
         dd = pd.read_pickle(filedir)
         arrow_locs = {y: False for y in dd['Y'].unique()}
         group_properties = group_analysis(dd, palette=palette, alpha=0.7, 
@@ -225,7 +245,7 @@ def main(filedir, outdir=None):
         
     # Find the nearest material in the database
     cprint('Finding structurally similar materials in the database...', color='c')
-    filedir = os.path.join(datadir, 'mp_data_integrated.pkl')
+    filedir = os.path.join(datadir, 'datasets', 'mp_data_integrated.pkl')
     df = pd.read_pickle(filedir)
     f = ds['feature_vector']
     df['distance'] = df['descriptor'].apply(lambda x: sum((x-f)**2))

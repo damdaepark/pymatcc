@@ -156,11 +156,11 @@ def replace_nan(x):
 
 
 def evaluate_feature_vector(ds, outdir, tmode='test'):
-    filedir = os.path.join(datadir, 'header.pkl')
+    filedir = os.path.join(datadir, 'datasets', 'header.pkl')
     with open(filedir, 'rb') as f:
         header = pickle.load(f)
         
-    filedir = os.path.join(datadir, 'rlist.pkl')
+    filedir = os.path.join(datadir, 'datasets', 'rlist.pkl')
     with open(filedir, 'rb') as f:
         rlist = pickle.load(f)
         
@@ -194,7 +194,7 @@ def evaluate_feature_vector(ds, outdir, tmode='test'):
     
     # Convert label data to metric
     cprint('Integer encoding of the structure-relevant properties...', color='w')
-    filedir = os.path.join(datadir, 'encoding.pkl')
+    filedir = os.path.join(datadir, 'datasets', 'encoding.pkl')
     with open(filedir, 'rb') as f:
         _dict_space_group = pickle.load(f)
         dict_space_group = _dict_space_group[0]
@@ -230,7 +230,7 @@ def evaluate_feature_vector(ds, outdir, tmode='test'):
     # Generate scaled feature vector
     cprint('Generate feature vector...', color='w')
     feature_vector = get_feature_vector(ds_, rlist=rlist)
-    filedir = os.path.join(datadir, 'scaler.joblib')
+    filedir = os.path.join(datadir, 'datasets', 'scaler.joblib')
     scaler = joblib.load(filedir)
     ds['feature_vector'] = scaler.transform(np.array(feature_vector).reshape(1,-1)).flatten()
     return ds
