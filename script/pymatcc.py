@@ -30,14 +30,14 @@ datadir = os.path.join(datadir, ELEMENT)
 
 
 datasets = {}
-datasets['mp_data_clustering_test'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvusuF-0MJTnEt0aEjQ'
-datasets['mp_data_subdivision_test'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvug_LTuHocEdp-ZiCg'
-datasets['mp_data_integrated_test'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvvYIuclL75o8rafQDw'
+datasets['mp_data_clustering'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvusuF-0MJTnEt0aEjQ'
+datasets['mp_data_subdivision'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvug_LTuHocEdp-ZiCg'
+datasets['mp_data_integrated'] = 'https://1drv.ms/u/s!AsYByGvNIVcsvvYIuclL75o8rafQDw'
 
 for dataset, url in datasets.items():
-    filedir = os.path.join(datadir, dataset + '.pkl')
+    filedir = os.path.join(datadir, 'datasets', dataset + '.pkl')
     if not checkexists(filedir):
-        cprint('Download training dataset', dataset, 'from OneDrive...', color='c')
+        cprint('Download training dataset', dataset, '...', color='c')
         simple_cli(url=url, filename=filedir)
     else:
         cprint('Training dataset', dataset, 'has already been downloaded. Skip.', color='g')
@@ -112,13 +112,12 @@ def classification(X, clusterer, dim_reducer):
 
 
 def main(filedir, outdir=None):
-    # 
-    
     # Make output directory if it is not exist
     outdir = os.path.join(datadir, 'results', outdir)
     if not checkexists(outdir, size_threshold=0):
         os.makedirs(outdir)
-    
+        os.makedirs(os.path.join(outdir, 'descriptors'))
+        
     # Load .cif file
     cprint('Load file', filedir, '...', color='c')
     parser = CifParser(filedir)

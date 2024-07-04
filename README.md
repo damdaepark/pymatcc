@@ -4,6 +4,12 @@ Python Materials Conductivity Classifier (Pymatcc) is a classification framework
 ## How it works
 For a given input material, Pymatcc first evaluates its structural descriptors (e.g., orbital field matrix, valence orbital, ...) and encodes them into a feature vector. Based on this feature vector representation, the material is classified into one of the groups made up of structurally similar compounds. Pymatcc then investigates available ionic conductivity records of the compounds within the group, and the potential of input material is assessed. The classifier was trained by unsupervised clustering of Na-ion solide-state electrolytes collected from open databases (e.g., Materials Project, ICSD, etc.). The details about the framework are described in our paper listed in the Citation section below. <br/>
 
+## Setup
+Run the following commands to setup the environment for running `pymatcc`:
+
+    $ conda create -n [ENV_NAME] python=3.8.16
+    $ pip install -r requirements.txt
+
 ## Requirements
 Pymatcc was developed primarily based on the libraries below: <br/>
 - hdbscan==0.8.37 <br/>
@@ -16,18 +22,18 @@ Pymatcc was developed primarily based on the libraries below: <br/>
 - colorcet==3.1.0 <br/>
 - matminer==0.9.0 <br/>
 
-The package requirements are listed in requirements.txt file. Run the following command to install dependencies in your virtual environment:
-
-    $ pip install -r requirements.txt
-
-
-## Setup
-Pymatcc currently does not support pip/conda installation.
+The detailed package requirements are listed in requirements.txt file.
 
 ## Usage
-Download the repository and run pymatcc by:
+Download the repository and run `pymatcc` by:
 
-    $ python pymatcc.py -f FILENAME.cif
+    $ python ./script/pymatcc.py -f "/ABSOLUTE/PATH/TO/FILENAME.cif" -o "RESULT_FOLDER_NAME"
+
+The results are saved in ./dat/results/RESULT_FOLDER_NAME
+
+You can test running with an out-of-sample data we provide by:
+
+    $ python ./script/test.py
 
 ## Data
 Materials Project dataset (ver. 2022.10.28) was used for training the classifier.
