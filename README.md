@@ -25,7 +25,7 @@ If you get any error in installing `annoy` library, try installing:
 Functionality has been verified on Windows (x64) and Linux (x64).
 
 ## Requirements
-`pymatcc` was developed primarily based on the libraries below: <br/>
+`pymatcc` was developed based on the libraries below: <br/>
 - hdbscan==0.8.37 <br/>
 - pacmap==0.7.0 <br/>
 - pymatgen==2023.8.10 <br/>
@@ -68,7 +68,7 @@ If you use `pymatcc` in your research, please consider citing the following work
 ## Acknowledgement
 The development of `pymatcc` was financially supported by the following grants from the National Research Foundation of Korea (NRF) of the Republic of Korea:
 - National Supercomputing Center with supercomputing resources including technical support (KSC-2024-CRE-0013).
-- institutional research program of Korea Institute of Science and Technology (2E32581).
+- Institutional research program of Korea Institute of Science and Technology (2E32581).
 
 ## License
 `pymatcc` is released under the MIT license. The terms of the licenses are as follows:

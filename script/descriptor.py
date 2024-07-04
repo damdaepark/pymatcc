@@ -10,7 +10,7 @@ from dscribe.descriptors import SOAP  # conda install -c conda-forge dscribe
 from pymatgen.io import ase
 
 from utils import datadir, imgdir, cprint, flatten_list, checkexists, isstring, \
-    isnumeric, istuple, isscalar, isarray, isstringdata
+    isnumeric, istuple, isscalar, isarray, isstringdata, isarraydata, flatten_list
 from config import ELEMENT, STRUCTURES
 datadir = os.path.join(datadir, ELEMENT)
 
@@ -117,6 +117,12 @@ def eval_descriptor(simplification, descriptor, ds, tmode, outdir,
     if checkexists(tempdir):
         with open(tempdir, 'rb') as f:
             result = pickle.load(f)
+        if isscalar(result):
+            pass
+        elif isarraydata(result):
+            result = flatten_list(result)
+        if isarray(result) and len(result) == 1:
+            result = result[0]  # unpack
     else:
         cprint('Evaluating descriptor vectors for', pair, 'pair...', color='w')
         if descriptor in mapper.keys():
@@ -145,7 +151,6 @@ def eval_descriptor(simplification, descriptor, ds, tmode, outdir,
         if save_results:
             with open(tempdir, 'wb') as f:
                 pickle.dump(result, f, pickle.HIGHEST_PROTOCOL)
-                    
     return result
 
 
