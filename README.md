@@ -45,7 +45,8 @@ You can try running an out-of-sample data for test:
     $ python ./script/test.py
 
 ## Data
-Materials Project dataset (ver. 2022.10.28) was used for training the classifier.
+- Materials Project dataset (ver. 2022.10.28) was used for training the classifier.
+- Out-of-data sample for test was obtained from 1. Deng, Z. et al. Fundamental investigations on the sodium-ion transport properties of mixed polyanion solid-state battery electrolytes. Nat. Commun. 13, 4470 (2022). [https://www.nature.com/articles/s41467-022-32190-7]
 
 ## Contributors
 This software was primarily written by Dr. Damdae Park and was advised by Dr. Kyeongsu Kim.
