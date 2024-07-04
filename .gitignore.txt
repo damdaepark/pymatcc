@@ -162,5 +162,6 @@ cython_debug/
 #.idea/
 
 # Files to exclude
-*.*
-!mp_data_*.pkl
+.\dat\Na\datasets\mp_data_clustering.pkl
+.\dat\Na\datasets\mp_data_integrated.pkl
+.\dat\Na\datasets\mp_data_subdivision.pkl
