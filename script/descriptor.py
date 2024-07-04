@@ -355,7 +355,7 @@ def run_SOAP(structures, unique_atoms, rcut, nmax, lmax, average, tmode=None, mo
                                 n_max=nmax, l_max=lmax, periodic=True,
                                 average=average, sparse=True)
             atoms = AAA.get_atoms(structure)
-            average_soap_data = average_soap.create(atoms, n_jobs=n_jobs, verbose=True)
+            average_soap_data = average_soap.create(atoms, n_jobs=4, verbose=True)
             
             # Mobile-to-mobile ions
             try:

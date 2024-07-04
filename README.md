@@ -5,8 +5,14 @@ Python Materials Conductivity Classifier (Pymatcc) is a classification framework
 For a given input material, Pymatcc first evaluates its structural descriptors (e.g., orbital field matrix, valence orbital, ...) and encodes them into a feature vector. Based on this feature vector representation, the material is classified into one of the groups made up of structurally similar compounds. Pymatcc then investigates available ionic conductivity records of the compounds within the group, and the potential of input material is assessed. The classifier was trained by unsupervised clustering of Na-ion solide-state electrolytes collected from open databases (e.g., Materials Project, ICSD, etc.). The details about the framework are described in our paper listed in the Citation section below. <br/>
 
 ## Setup
-Run the following commands to setup the environment for running `pymatcc`:
+Download repository as .zip file and unzip or clone it by:
 
+    $ git clone https://github.com/damdaepark/pymatcc.git "/PATH/TO/DOWNLOAD"
+    
+
+Then run the following commands to setup the environment for running `pymatcc`:
+
+    $ cd /PATH/TO/DOWNLOAD
     $ conda create -n ENV_NAME python=3.8.16
     $ pip install -r requirements.txt
 
