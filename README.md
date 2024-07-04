@@ -17,8 +17,9 @@ Then run the following commands to setup the environment for running `pymatcc`:
     $ conda activate ENV_NAME
     $ pip install -r requirements.txt
 
-If you get any error in installation for Linux system, try installing:
+If you get any error in installing `annoy` library, try installing:
 
+    $ conda install -c conda-forge python-annoy
     $ pip install -r requirements.txt
 
 Functionality has been verified on Windows (x64) and Linux (x64).
@@ -47,6 +48,8 @@ The results will be saved in ./dat/results/RESULT_FOLDER_NAME <br/>
 You can try running an out-of-sample data for test:
 
     $ python ./script/test.py
+
+The training datasets (2.0 GB in total) will be downloaded during its first execution.
 
 ## Data
 - Materials Project dataset (ver. 2022.10.28) was used for training the classifier.
