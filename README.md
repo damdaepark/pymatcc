@@ -17,6 +17,10 @@ Then run the following commands to setup the environment for running `pymatcc`:
     $ conda activate ENV_NAME
     $ pip install -r requirements.txt
 
+If you get any error in installation for Linux system, try installing:
+
+    $ pip install -r requirements.txt
+
 Functionality has been verified on Windows (x64) and Linux (x64).
 
 ## Requirements
