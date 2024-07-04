@@ -14,6 +14,7 @@ Then run the following commands to setup the environment for running `pymatcc`:
 
     $ cd /PATH/TO/DOWNLOAD
     $ conda create -n ENV_NAME python=3.8.16
+    $ conda activate ENV_NAME
     $ pip install -r requirements.txt
 
 ## Requirements
